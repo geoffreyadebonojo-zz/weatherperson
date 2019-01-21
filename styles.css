@@ -1,5 +1,6 @@
 body {
 	font-family: 'Courier New';
+	font-size: 3em;
 }
 
 header {
@@ -15,14 +16,18 @@ header {
 
 #number {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 2em;
 	color: #ED458B;
 }
 
 #guesser {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 2em;
 	color: #E6E7E8;
+}
+
+#reply.input {
+	font-size: 1em;
 }
 
 .guessbutton, .clearbutton, .resetbutton {
@@ -31,21 +36,25 @@ header {
 	border-radius:25px;
 	padding: 0px;
 	width: 50px;
-    height: 20px;
+  height: 20px;
 	text-align: center;
 }
 
-.guessbutton:hover, .clearbutton:hover{
+.guessbutton:hover, .clearbutton:hover, .resetbutton:hover {
 	background: #EB008B;
 	color: #FFFFFF;
-	
+	cursor: pointer;
 }
 
-.lastguess{
+.lastguess {
 	color: #404041;
 }
 
 .guess {
-	font-size: 50px;
+	line-height: 2em;	
+	font-size: 2em;
 }
 
+.answer {
+	margin: 0;
+}
