@@ -1,0 +1,51 @@
+body {
+	font-family: 'Courier New';
+}
+
+header {
+	background: #404041;
+	font-weight: 900;
+}
+
+
+#sneaky {
+	font-size: 10px;
+	color: #333333;
+}
+
+#number {
+	font-weight: bold;
+	font-size: 20px;
+	color: #ED458B;
+}
+
+#guesser {
+	font-weight: bold;
+	font-size: 20px;
+	color: #E6E7E8;
+}
+
+.guessbutton, .clearbutton, .resetbutton {
+	background: #929497;
+	color: #FFFFFF;
+	border-radius:25px;
+	padding: 0px;
+	width: 50px;
+    height: 20px;
+	text-align: center;
+}
+
+.guessbutton:hover, .clearbutton:hover{
+	background: #EB008B;
+	color: #FFFFFF;
+	
+}
+
+.lastguess{
+	color: #404041;
+}
+
+.guess {
+	font-size: 50px;
+}
+

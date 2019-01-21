@@ -1,1 +1,29 @@
-Hello World
+<!DOCTYPE html>
+
+<head>
+<title>Number Guesser</title>
+<link rel= stylesheet href= 'styles.css'>
+</head>
+<body>
+
+	<header><div id='sneaky'>Unconstructive Feedback</div> <span id= "number"> Number</span> <span id= "guesser"> Guesser</span></header>
+
+	<div id= 'entryfield'>
+		<input id='reply' placeholder='Enter your Guess' class='input'>
+	</div>
+
+	<span id='userbuttons'>
+		<button class= 'guessbutton'>Guess</button>
+		<button class= 'clearbutton'>Clear</button>
+	</span>
+
+	<div class= 'gentleencouragement'>Why haven't you guessed yet?</div>
+	<div id="num-guesses"></div>
+
+	<div id= 'lastguess'>Last Guess was</div>
+	<span class= 'guess'>00</span>
+	<h4 class= 'answer'></h4>
+	<button class = 'resetbutton'>Reset</button>
+
+<script rel= 'text/javascript' src = 'script.js'></script>
+</body>
