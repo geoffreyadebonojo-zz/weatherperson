@@ -1,3 +1,4 @@
+console.log("script.js loaded");
 function fetchData(){
   fetch('https://dry-hollows-79406.herokuapp.com/api/v1/forecast')
     .then(response => response.json())
@@ -7,4 +8,3 @@ function fetchData(){
     .catch(error => console.error(error))
 }
 fetchData();
-console.log("Index connected");
