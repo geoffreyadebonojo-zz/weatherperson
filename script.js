@@ -16,8 +16,6 @@ $("#button-1").click(function(){
   });
 });
 
-console.log(
-
 $("#button-2").click(function(){
   $.ajax({
     url: "https://dry-hollows-79406.herokuapp.com/api/v1/favorites",
