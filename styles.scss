@@ -2,11 +2,151 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: #1BE7FF;
+  color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
 }
 
-#main-info {
-  border: red 1px solid;
+.container {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  height: 100%;
+}
+
+.sub-container {
+  background: black;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    height: 100%;
+  }
+
+  .sub-container {
+    background: black;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    height: 100%;
+  }
+
+  .sub-container {
+    background: black;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    height: 100%
+  }
+}
+
+.box {
+  margin: 00px 10px 10px 10px;
+  padding: 1em;
+  height: 15%;
+  border-radius: 4px;
+}
+
+.current {
+  height: 300px;
+  background: white;
+  color: black;
+}
+
+.next-hour, .tomorrow, .next-day-2 {
+  height: 100px;
+}
+
+.next-hour {
+  background: grey;
+}
+
+.tomorrow {
+  background: white;
+  color: black;
+}
+
+.next-day-2 {
+  background: orange;
+}
+
+#temp-n-conditions {
+  display: grid;
+  grid-template-columns: 100px 200px 100px;
+  margin: 0px;
+  height: 30%;
+}
+
+.other-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 80px 80px;
+  height: 20%;
+}
+
+.gif-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.favorite:nth-child(3n+1){
+  background: darkorange;
+}
+
+.favorite:nth-child(3n + 2){
+  background: white;
+  color: black;
+}
+
+.favorite:nth-child(3n + 3){
+  background: grey;
+}
+
+#conditions, #temp {
+  font-size: 48px;
+}
+
+#forecasts {
+  margin: 1em;
+  background: white;
+  color: black;
+  height: 100%;
+}
+
+.hourly {
+  margin: 1em;
+  background: grey;
+}
+
+
+.fas {
+  font-size: 32px;
+}
+
+.fa-sun {
+  font-size: 66px;
+}
+.icon {
+  width: 50px;
 }
