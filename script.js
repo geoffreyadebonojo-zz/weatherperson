@@ -3,8 +3,9 @@ function fetchData(){
   fetch('https://dry-hollows-79406.herokuapp.com/api/v1/forecast')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      localStorage.setItem("forecastData", JSON.stringify(data));
     })
     .catch(error => console.error(error))
 }
-fetchData();
+var loadButton = document.getElementById("load-button");
+loadButton.addEventListener("click", fetchData());
