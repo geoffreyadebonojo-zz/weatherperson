@@ -8,6 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="weatherIcon.js"></script>
+  <script src="getFavorites.js"></script>
+  <script src="getWeather.js"></script>
 </head>
 <body>
 
@@ -17,11 +20,18 @@
 
   <form class="pure-form">
       <input id="name" type="text" placeholder="Enter Name" />
-      <button type="submit"><i class="fa fa-chevron-circle-right"></i></button>
+      <button type="submit">ADD CITY</button>
   </form>
 
-  <div class="temp-container"></div>
+  <div id="top">
+    <div id="main-container"></div>
+    <div id="details-container"></div>
+  </div>
+  <div id="bottom">
+    <div id="forecasts-container"></div>
+  </div>
 
 </body>
-<script src="script.js"></script>
+<script src="postFavorites.js"></script>
+<script src="renderMain.js"></script>
 </html>
