@@ -6,3 +6,26 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
 }
+
+#top{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+#bottom{
+  margin: 10px;
+}
+
+#main-container, #details-container{
+  border: 1px red solid;
+  height: 100%;
+  width: 100%;
+}
+
+#forecasts-container{
+  border: 1px red solid;
+  height: 50%;
+  width: 100%;
+}
