@@ -11,43 +11,16 @@
 </head>
 <body>
 
-<button onclick="getWeather()">Weather</button>
-  <div class="container">
-    <div class="sub-container"><br>
-      <div id="favorites"></div>
-    </div>
-    <div class="sub-container"><br>
-      <div class="box current">
-        <div id="temp-n-conditions" class="container">
-          <div id="icon"></div>
-          <div id="conditions"></div>
-          <div id="temp"></div>
-        </div>
-        <div class="other-information">
-          <div id="wind"><i class='fas fa-wind'></i>??</div>
-          <div id="sunrise"></div>
-        </div>
-        <hr>
-        <div class="other-information">
-          <div id="precip"><i class='fas fa-cloud-showers-heavy'></i></div>
-          <div id="sunset"></div>
-        </div>
-        <hr>
-        <div class="other-information">
-          <div id="feeling"><i class='fas fa-temperature-low'></i>
-          </div>
-          <div>moonphase</div>
-        </div>
-      </div>
-      <div class="box" id="next-hour">next hour?</div>
-      <div class="box tomorrow">tomorrow?</div>
-      <div class="box next-day-2">2 day forecast?</div>
-    </div>
-    <div class="sub-container">
-      <div class="box" id="forecasts"></div>
-      <div id="hourly"></div>
-    </div>
-  </div>
+  <button onclick="getWeather()">Weather</button>
+  <!-- <button onclick="apiKey()">API KEY</button> -->
+  <button onclick="getFavorites()">Faves</button>
+
+  <form class="pure-form">
+      <input id="name" type="text" placeholder="Enter Name" />
+      <button type="submit"><i class="fa fa-chevron-circle-right"></i></button>
+  </form>
+
+  <div class="temp-container"></div>
 
 </body>
 <script src="script.js"></script>
