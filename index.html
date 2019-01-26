@@ -18,20 +18,23 @@
   <!-- <button onclick="apiKey()">API KEY</button> -->
   <button onclick="getFavorites()">Faves</button>
 
-  <form class="pure-form">
-      <input id="name" type="text" placeholder="Enter Name" />
-      <button type="submit">ADD CITY</button>
-  </form>
+
 
   <div id="top">
     <div id="main-container">
       <div id="left-main">
       </div>
-      <div id="right-main"></div>
+      <div id="right-main">
+        <form class="pure-form">
+            <input id="name" type="text" placeholder="Enter Name" />
+            <button type="submit">ADD CITY</button>
+        </form>
+      </div>
     </div>
     <div id="details-container">
-      <div id="left-details">1</div>
-      <div id="right-details">2</div>
+      <div id="left-details"></div>
+      <div id="right-details"></div>
+      <div id="bottom-details"></div>
     </div>
   </div>
 
@@ -59,4 +62,5 @@
 </body>
 <script src="postFavorites.js"></script>
 <script src="renderMain.js"></script>
+<script src="renderDetails.js"></script>
 </html>
