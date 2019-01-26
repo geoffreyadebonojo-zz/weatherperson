@@ -43,7 +43,7 @@
   height: 100%;
   width: 100%;
   border-radius: 15px;
-  
+
 }
 
 #right-details, #left-details, #bottom-details{
@@ -92,6 +92,9 @@
 
 .daily{
   border: 1px red solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
 }
 
 .primary{

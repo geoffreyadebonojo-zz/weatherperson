@@ -1,14 +1,14 @@
 function renderMain(){
-  var data = JSON.parse(localStorage.getItem("storedForecast"));
-  console.log(data);
-  var temp = data.temperature;
+  var data     = JSON.parse(localStorage.getItem("storedForecast"));
+  var temp     = data.temperature;
   var forecast = data.daily_forecasts[0].icon;
-  var high = data.high;
-  var low = data.low;
+  var summary  = data.summary;
+  var high     = data.high;
+  var low      = data.low;
 
   var leftMain = $( "#left-main" );
   leftMain.append(`
-    <p class="summary secondary"> ${weatherIcon(forecast)}&nbsp ${forecast} </p>
+    <p class="summary secondary"> ${weatherIcon(forecast)}&nbsp ${summary} </p>
     <h1 class="temp-display">
 
       ${Math.round(temp)}&deg

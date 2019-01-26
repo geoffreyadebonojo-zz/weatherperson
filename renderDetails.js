@@ -23,8 +23,6 @@ function renderDetails(){
   `);
 
   var rightDetails = $("#right-details");
-  console.log(rightDetails);
-
   rightDetails.append(`
     <p class="secondary">feels like: ${feelsLike}&deg</p>
     <p class="secondary">humidity: ${humidity}</p>

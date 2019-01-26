@@ -11,11 +11,12 @@
   <script src="weatherIcon.js"></script>
   <script src="getFavorites.js"></script>
   <script src="getWeather.js"></script>
+  <script src="getApiKey.js"></script>
 </head>
 <body>
 
   <button onclick="getWeather()">Weather</button>
-  <!-- <button onclick="apiKey()">API KEY</button> -->
+  <button onclick="apiKey()">API KEY</button>
   <button onclick="getFavorites()">Faves</button>
 
 
@@ -40,21 +41,21 @@
 
   <div id="bottom">
     <div id="hourly">
-      <div class="hourly">1</div>
-      <div class="hourly">2</div>
-      <div class="hourly">3</div>
-      <div class="hourly">4</div>
-      <div class="hourly">5</div>
-      <div class="hourly">6</div>
-      <div class="hourly">7</div>
-      <div class="hourly">8</div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
+      <div class="hourly"></div>
     </div>
     <div id="daily">
-      <div class="daily">1</div>
-      <div class="daily">2</div>
-      <div class="daily">3</div>
-      <div class="daily">4</div>
-      <div class="daily">5</div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
     </div>
     </div>
   </div>
@@ -63,4 +64,6 @@
 <script src="postFavorites.js"></script>
 <script src="renderMain.js"></script>
 <script src="renderDetails.js"></script>
+<script src="renderHourly.js"></script>
+<script src="renderDaily.js"></script>
 </html>
