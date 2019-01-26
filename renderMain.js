@@ -5,11 +5,12 @@ function renderMain(){
   var forecast = data.daily_forecasts[0].icon;
   var high = data.high;
   var low = data.low;
-  var container = $( "#left-main" );
-  container.append(
-    `<p class="summary secondary"> ${forecast} </p>
-    <h2>
-      ${weatherIcon(forecast)}&nbsp
+
+  var leftMain = $( "#left-main" );
+  leftMain.append(
+    `<p class="summary secondary"> ${weatherIcon(forecast)}&nbsp ${forecast} </p>
+    <h2 class="temp-display">
+
       ${Math.round(temp)}&deg
     </h2>
     <p class="high secondary">
@@ -19,22 +20,33 @@ function renderMain(){
       Low:  ${Math.round(low)}
     </p>`
   );
+  if (temp < 32) {
+    $(".temp-display").css({
+      "color": "rgb(0, 0, 200)",
+    });
+  } else {
+    $(".temp-display").css({
+      "color": "rgb(0, 0, 0)",
+    });
+  }
 
-  // container.append(
-  //   "<h1>" +
-  //   weatherIcon(forecast) + " " +
-  //   Math.round(temp) + "&deg" +
-  //   "</h1>"
-  // );
-  //
-  // if (temp < 32) {
-  //   container.css({
-  //     "color": "rgb(0, 0, 200)",
-  //   });
-  // } else {
-  //   container.css({
-  //     "color": "rgb(0, 0, 0)",
-  //   });
-  // }
+  var city = data.city;
+  var state = data.state;
+
+  var rightMain = $("#right-main");
+  rightMain.append(
+    `
+    <h3>
+      ${city}, ${state}
+    </h3>
+    <h5>
+      United States
+    </h5>
+    <p class="secondary">
+      Time, Date
+    </p>
+    `
+  );
+
 }
 renderMain();
