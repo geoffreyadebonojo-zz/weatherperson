@@ -17,7 +17,7 @@ for (var i= 0; i<boxes.length; i++){
   forecast = data.hourly_forecasts[i + (start-8)].temp;
   boxes[i].innerHTML += "<p>" + date + "</p>";
   boxes[i].innerHTML += "<p>" + weatherIcon(icon) + icon + "</p>";
-  boxes[i].innerHTML += "<p>Precipitation: " + precip*100 + "%</p>";
+  boxes[i].innerHTML += "<p>Precipitation: " + Math.round(precip*100) + "%</p>";
   boxes[i].innerHTML += "<p>High: " + Math.round(high) + "&deg</p>";
   boxes[i].innerHTML += "<p>Low: " + Math.round(low) + "&deg</p>";
 }
