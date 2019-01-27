@@ -1,12 +1,9 @@
-var boxes = $(".hourly")
 var data  = JSON.parse(localStorage.getItem("storedForecast"));
 
 var start = new Date().getHours();
-console.log(start);
 var forecasts = []
-for (var i= 0; i<boxes.length; i++){
+for (var i= 0; i<8; i++){
   var hours = new Date(data.hourly_forecasts[i].id*1000).getHours();
-  console.log(hours);
   if (hours < 13){
     hours = hours + " AM";
   } else {
@@ -16,6 +13,11 @@ for (var i= 0; i<boxes.length; i++){
   //TODO Refactor into jQuery
 
   forecast = data.hourly_forecasts[i].temp;
-  boxes[i].innerHTML += "<p>" + hours + "</p>";
-  boxes[i].innerHTML += "<p>" + Math.round(forecast) + "&deg</p>";
+  var box = $("#hourly");
+
+  box.append('<div class="hourly">' +
+  "<p>" + hours + "</p>" +
+  "<p>" + Math.round(forecast) + "&deg</p>" +
+  "</div>");
 }
+console.log(`${boxes.length} hourly forecasts displayed`);
