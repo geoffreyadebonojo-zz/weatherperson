@@ -8,15 +8,14 @@ function renderMain(){
 
   var leftMain = $( "#left-main" );
   leftMain.append(`
-    <p class="summary secondary"> ${weatherIcon(forecast)}&nbsp ${summary} </p>
+    <p class="summary"> ${weatherIcon(forecast)}&nbsp ${summary} </p>
     <h1 class="temp-display">
-
       ${Math.round(temp)}&deg
     </h1>
     <p class="high secondary">
       High: ${Math.round(high)}
     </p>
-    <p class="high secondary">
+    <p class="low secondary">
       Low:  ${Math.round(low)}
     </p>
   `);
@@ -45,6 +44,24 @@ function renderMain(){
       Time, Date
     </p>
   `);
+
+center = {x: 95, y: 60};
+size = {outer: 60, inner: 50};
+
+var c = document.getElementById("temp-gauge");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(center.x, center.y);
+ctx.arc(center.x, center.y, size.outer, 0, (2 * Math.PI)*(temp/360 * 3.6));
+ctx.fillStyle = "rgb(0,0,255)";
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(center.x, center.y, size.inner, 0, 2 * Math.PI);
+ctx.fillStyle = "white";
+ctx.fill();
+ctx.stroke();
 
 }
 renderMain();

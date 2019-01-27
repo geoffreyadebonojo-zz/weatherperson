@@ -12,14 +12,14 @@
   <script src="getFavorites.js"></script>
   <script src="getWeather.js"></script>
   <script src="getApiKey.js"></script>
-  <script src="renderDetails.js"></script>
+  <!-- <script src="renderDetails.js"></script> -->
   <script src="renderFavorites.js"></script>
 </head>
 <body>
 
   <button onclick="apiKey()">API KEY</button>
   <button onclick="getWeather()">Refresh</button>
-  <button onclick="renderDetails()">Render Details</button>
+  <!-- <button onclick="renderDetails()">Render Details</button> -->
   <button onclick="getFavorites()">Get Favorites</button>
   <button onclick="renderFavorites()">Show Favorites</button>
   <form class="pure-form">
@@ -30,7 +30,9 @@
 
   <div id="top">
     <div id="main-container">
-      <div id="left-main"></div>
+      <div id="left-main">
+        <canvas id="temp-gauge"></canvas>
+      </div>
       <div id="right-main"></div>
     </div>
     <div id="details-container">
@@ -41,9 +43,7 @@
   </div>
 
   <div id="bottom">
-    <div id="hourly">
-    
-    </div>
+    <div id="hourly"></div>
     <div id="daily">
       <div class="daily"></div>
       <div class="daily"></div>
@@ -59,4 +59,5 @@
 <script src="renderMain.js"></script>
 <script src="renderHourly.js"></script>
 <script src="renderDaily.js"></script>
+<script src="renderDetails.js"></script>
 </html>

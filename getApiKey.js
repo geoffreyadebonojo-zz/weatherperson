@@ -10,4 +10,5 @@ function apiKey(){
     function(data, status){
       localStorage.setItem("api_key", data.data.key)
   })
+  console.log("refreshing key");
 }

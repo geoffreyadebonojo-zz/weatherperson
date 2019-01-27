@@ -22,3 +22,4 @@ function renderFavorites(){
   });
 
 }
+console.log("favorites rendered");

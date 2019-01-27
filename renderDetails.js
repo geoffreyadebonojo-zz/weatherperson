@@ -35,3 +35,4 @@ function renderDetails(){
 
 }
 renderDetails();
+console.log("details box rendered");

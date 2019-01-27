@@ -9,10 +9,10 @@ for (var i= 0; i<boxes.length; i++){
   var precip = data.daily_forecasts[i].precipitation;
   //TODO Refactor into jQuery
 
-  forecast = data.hourly_forecasts[i].temperature;
   boxes[i].innerHTML += "<p>" + date + "</p>";
   boxes[i].innerHTML += "<p>" + weatherIcon(icon) + icon + "</p>";
   boxes[i].innerHTML += "<p>Precipitation: " + Math.round(precip*100) + "%</p>";
   boxes[i].innerHTML += "<p>High: " + Math.round(high) + "&deg</p>";
   boxes[i].innerHTML += "<p>Low: " + Math.round(low) + "&deg</p>";
 }
+console.log(`${boxes.length} hourly forecasts displayed`);

@@ -27,6 +27,7 @@
   grid-template-columns: 300px 400px;
   /* border: 1px red solid; */
   width: 100%;
+  height: 280px;
 }
 
 #right-main{
@@ -41,12 +42,39 @@
   padding: 20px;
 }
 
+.temp-display{
+  font-size: 2em;
+  position: relative;
+  bottom: 180px;
+  left: 65px;
+}
+
+.summary{
+  position: relative;
+  bottom: 180px;
+}
+
+.low{
+  position: relative;
+  bottom: 200px;
+}
+
+.high{
+  position: relative;
+  bottom: 170px;
+  left: 120px;
+}
+
+#temp-gauge{
+  position:relative;
+  top: 20px;
+}
 
 #details-container{
   display: grid;
   grid-template-columns: 300px 300px;
   /* border: 1px red solid; */
-  height: 400px;
+  height: 280px;
   width: 100%;
   overflow: scroll;
 }
@@ -103,7 +131,7 @@
 .daily{
   /* border: 1px red solid; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 12% 12%;
   grid-gap: 5px;
 }
 
