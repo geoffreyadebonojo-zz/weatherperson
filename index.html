@@ -8,47 +8,56 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="weatherIcon.js"></script>
+  <script src="getFavorites.js"></script>
+  <script src="getWeather.js"></script>
+  <script src="getApiKey.js"></script>
+  <!-- <script src="renderDetails.js"></script> -->
+  <!-- <script src="renderFavorites.js"></script> -->
 </head>
 <body>
 
-<button onclick="getWeather()">Weather</button>
-  <div class="container">
-    <div class="sub-container"><br>
-      <div id="favorites"></div>
-    </div>
-    <div class="sub-container"><br>
-      <div class="box current">
-        <div id="temp-n-conditions" class="container">
-          <div id="icon"></div>
-          <div id="conditions"></div>
-          <div id="temp"></div>
-        </div>
-        <div class="other-information">
-          <div id="wind"><i class='fas fa-wind'></i>??</div>
-          <div id="sunrise"></div>
-        </div>
-        <hr>
-        <div class="other-information">
-          <div id="precip"><i class='fas fa-cloud-showers-heavy'></i></div>
-          <div id="sunset"></div>
-        </div>
-        <hr>
-        <div class="other-information">
-          <div id="feeling"><i class='fas fa-temperature-low'></i>
-          </div>
-          <div>moonphase</div>
-        </div>
+  <button onclick="apiKey()">API KEY</button>
+  <button onclick="getWeather()">Refresh</button>
+  <!-- <button onclick="renderDetails()">Render Details</button> -->
+  <!-- <button onclick="getFavorites()">Get Favorites</button> -->
+  <!-- <button onclick="renderFavorites()">Show Favorites</button> -->
+  <form class="pure-form">
+      <input id="name" type="text" placeholder="Enter Name" />
+      <button type="submit">ADD CITY</button>
+  </form>
+
+
+  <div id="top">
+    <div id="main-container">
+      <div id="left-main">
+        <canvas id="temp-gauge"></canvas>
       </div>
-      <div class="box" id="next-hour">next hour?</div>
-      <div class="box tomorrow">tomorrow?</div>
-      <div class="box next-day-2">2 day forecast?</div>
+      <div id="right-main"></div>
     </div>
-    <div class="sub-container">
-      <div class="box" id="forecasts"></div>
-      <div id="hourly"></div>
+    <div id="details-container">
+      <div id="left-details"></div>
+      <div id="right-details"></div>
+      <div id="bottom-details"></div>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div id="hourly"></div>
+    <div id="daily">
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+      <div class="daily"></div>
+    </div>
     </div>
   </div>
 
 </body>
-<script src="script.js"></script>
+<script src="postFavorites.js"></script>
+<script src="renderMain.js"></script>
+<script src="renderHourly.js"></script>
+<script src="renderDaily.js"></script>
+<script src="renderDetails.js"></script>
 </html>
