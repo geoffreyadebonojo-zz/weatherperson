@@ -5,8 +5,6 @@ function getWeather(){
   .then(data => {
     localStorage.setItem("storedForecast", JSON.stringify(data.data));
     forecast = JSON.parse(localStorage.getItem("storedForecast"));
-    console.log("fetched from api");
-    console.log(forecast);
   })
   .catch(error => console.error(error))
 }

@@ -10,6 +10,7 @@ function renderDetails(){
   var uvIndex     = data.uv_index
 
   var leftDetails = $("#left-details");
+  leftDetails.html("");
   leftDetails.append(`
     <h1 class="centered">&nbsp&nbsp${weatherIcon(forecast)}</h1>
     <p class="secondary centered">${summary}</p>
@@ -17,12 +18,14 @@ function renderDetails(){
   `);
 
   var bottomDetails = $("#bottom-details");
+  bottomDetails.html("");
   bottomDetails.append(`
     <p class="primary">${today}</p>
     <p class="primary">${tonight}</p>
   `);
 
   var rightDetails = $("#right-details");
+  rightDetails.html("");
   rightDetails.append(`
     <p class="secondary">feels like: ${feelsLike}&deg</p>
     <p class="secondary">humidity: ${humidity}</p>

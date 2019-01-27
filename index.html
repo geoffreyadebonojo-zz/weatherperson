@@ -20,20 +20,18 @@
   <button onclick="apiKey()">API KEY</button>
   <button onclick="getWeather()">Refresh</button>
   <button onclick="renderDetails()">Render Details</button>
-  <button onclick="renderFavorites()">Render Favorites</button>
-
+  <button onclick="getFavorites()">Get Favorites</button>
+  <button onclick="renderFavorites()">Show Favorites</button>
+  <form class="pure-form">
+      <input id="name" type="text" placeholder="Enter Name" />
+      <button type="submit">ADD CITY</button>
+  </form>
 
 
   <div id="top">
     <div id="main-container">
-      <div id="left-main">
-      </div>
-      <div id="right-main">
-        <form class="pure-form">
-            <input id="name" type="text" placeholder="Enter Name" />
-            <button type="submit">ADD CITY</button>
-        </form>
-      </div>
+      <div id="left-main"></div>
+      <div id="right-main"></div>
     </div>
     <div id="details-container">
       <div id="left-details"></div>
