@@ -18,26 +18,22 @@
 #main-container, #details-container, .daily, .hourly{
   background: #7371FC;
   border-radius: 10px;
-  /* border: 3px #E5D9F2 solid; */
   box-shadow: 4px 4px;
 }
 
 #main-container{
   display: grid;
   grid-template-columns: 300px 400px;
-  /* border: 1px red solid; */
   width: 100%;
   height: 280px;
 }
 
 #right-main{
-  /* border: 1px red solid; */
   margin: 20px;
   padding: 20px;
 }
 
 #left-main{
-  /* border: 1px red solid; */
   margin: 20px;
   padding: 20px;
 }
@@ -72,28 +68,28 @@
 
 #details-container{
   display: grid;
-  grid-template-columns: 300px 300px;
-  /* border: 1px red solid; */
+  grid-template-columns: 400px 200px;
+  grid-template-rows: 140px;
   height: 280px;
   width: 100%;
   overflow: scroll;
 }
 
 #right-details, #left-details, #bottom-details{
-  /* border: 1px red solid; */
   margin: 20px;
 }
 
 #bottom-details{
   width: 180%;
   height: 70px;
+  position: relative;
+  top: 20px;
+  left: 50px;
 }
 
 #right-details{
   line-height: 0.8em;
-  padding: 20px;
 }
-
 
 #bottom{
   margin: 20px 10px 0 10px;
@@ -112,7 +108,6 @@
 }
 
 .hourly{
-  /* border: 1px red solid; */
   border-radius: 10px;
 }
 

@@ -2,7 +2,6 @@ var data  = JSON.parse(localStorage.getItem("storedForecast"));
 
 var start = new Date().getHours();
 console.log(start);
-start = 20;
 var forecasts = []
 for (var i= 0; i<8; i++){
   var hours = new Date(data.hourly_forecasts[i+(start-8)].id*1000).getHours();
