@@ -4,7 +4,7 @@ var start = new Date().getHours();
 console.log(start);
 var forecasts = []
 for (var i= 0; i<8; i++){
-  var hours = new Date(data.hourly_forecasts[i+(start-8)].id*1000).getHours();
+  var hours = new Date(data.hourly_forecasts[i+1].id*1000).getHours();
   if (hours == 0){
     hours = "12 AM";
   } else if (hours < 13){
@@ -13,7 +13,7 @@ for (var i= 0; i<8; i++){
     hours = (hours - 12) + " PM";
   }
 
-  forecast = data.hourly_forecasts[i+(start-8)].temp;
+  forecast = data.hourly_forecasts[i+1].temp;
   var box = $("#hourly");
 
   box.append(`

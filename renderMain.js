@@ -32,6 +32,14 @@ function renderMain(){
   var city = data.city;
   var state = data.state;
 
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var m = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var months = m[date.getMonth()];
+  var day = date.getDate();
+
+  console.log(hours, minutes, months, day);
   var rightMain = $("#right-main");
   rightMain.append(`
     <h3>
@@ -41,7 +49,7 @@ function renderMain(){
       United States
     </h5>
     <p class="secondary">
-      Time, Date
+      ${hours}:${minutes}, ${months}/${day}
     </p>
   `);
 

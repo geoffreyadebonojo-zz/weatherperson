@@ -9,8 +9,13 @@ for (var i= 0; i<boxes.length; i++){
   var precip = data.daily_forecasts[i].precipitation;
   //TODO Refactor into jQuery
 
-  boxes[i].innerHTML += "<p>" + date + "</p>";
-  boxes[i].innerHTML += "<p>" + weatherIcon(icon) + icon + "</p>";
+  var d = new Date();
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var dayOfWeek = days[d.getDay() + i];
+
+
+  boxes[i].innerHTML += "<p>&nbsp&nbsp&nbsp" + dayOfWeek + "</p>";
+  boxes[i].innerHTML += "<p>" + weatherIcon(icon) + "</p>";
   boxes[i].innerHTML += "<p>Precipitation: " + Math.round(precip*100) + "%</p>";
   boxes[i].innerHTML += "<p>High: " + Math.round(high) + "&deg</p>";
   boxes[i].innerHTML += "<p>Low: " + Math.round(low) + "&deg</p>";

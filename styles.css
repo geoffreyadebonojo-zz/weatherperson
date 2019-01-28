@@ -126,7 +126,7 @@
 .daily{
   /* border: 1px red solid; */
   display: grid;
-  grid-template-columns: 25% 25% 25% 12% 12%;
+  grid-template-columns: 25% 12% 25% 20% 20%;
   grid-gap: 5px;
 }
 
