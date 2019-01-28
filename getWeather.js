@@ -9,3 +9,4 @@ function getWeather(){
   })
   .catch(error => console.error(error))
 }
+getWeather();

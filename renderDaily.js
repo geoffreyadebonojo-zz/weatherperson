@@ -13,7 +13,6 @@ for (var i= 0; i<boxes.length; i++){
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var dayOfWeek = days[d.getDay() + i];
 
-
   boxes[i].innerHTML += "<p>&nbsp&nbsp&nbsp" + dayOfWeek + "</p>";
   boxes[i].innerHTML += "<p>" + weatherIcon(icon) + "</p>";
   boxes[i].innerHTML += "<p>Precipitation: " + Math.round(precip*100) + "%</p>";

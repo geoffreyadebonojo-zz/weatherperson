@@ -1,5 +1,8 @@
 function weatherIcon(forecast){
   switch(forecast) {
+  case "fog":
+    //find a better icon for fog
+    return '<i class="fa fa-cloud" aria-hidden="true"></i>';
   case "snow":
     return '<i class="far fa-snowflake"></i>';
   case "clear-day":
