@@ -12,16 +12,16 @@ function renderDetails(){
   var leftDetails = $("#left-details");
   leftDetails.html("");
   leftDetails.append(`
-    <h1 class="centered">&nbsp&nbsp${weatherIcon(forecast)}</h1>
-    <p class="secondary centered">${summary}</p>
+    <h1 class="centered" id="details-icon">&nbsp&nbsp${weatherIcon(forecast)}</h1>
+    <p class="secondary centered" id="details-summary">${summary}</p>
     <br>
   `);
 
   var bottomDetails = $("#bottom-details");
   bottomDetails.html("");
   bottomDetails.append(`
-    <p class="primary">${today}</p>
-    <p class="primary">${tonight}</p>
+    <p class="primary">Today:&nbsp&nbsp&nbsp ${today}</p>
+    <p class="primary">Tonight: ${tonight}</p>
   `);
 
   var rightDetails = $("#right-details");
