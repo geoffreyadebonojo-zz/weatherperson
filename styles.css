@@ -68,7 +68,7 @@
 
 #details-container{
   display: grid;
-  grid-template-columns: 400px 200px;
+  grid-template-columns: 600px 200px;
   grid-template-rows: 140px;
   height: 280px;
   width: 100%;
@@ -88,7 +88,7 @@
 }
 
 #right-details{
-  line-height: 0.8em;
+  line-height: 1.7em;
 }
 
 #bottom{
@@ -101,16 +101,17 @@
 
 #hourly{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(24, 1fr);
   grid-gap: 10px;
   height: 100%;
   width: 100%;
+  font-size: 0.7em;
 }
 
 .hourly{
   border-radius: 10px;
   width: 100%;
-  height: 160px;
+  height: 300px;
 }
 
 .hourly p{
@@ -143,4 +144,14 @@
 
 .centered{
   margin-left: 35%;
+}
+
+#details-icon{
+  font-size: 3em;
+}
+
+#details-summary{
+  position: relative;
+  bottom: 170px;
+  left: 50px;
 }
