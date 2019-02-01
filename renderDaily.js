@@ -11,7 +11,7 @@ for (var i= 0; i<boxes.length; i++){
 
   var d = new Date();
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  var dayOfWeek = days[d.getDay() + i];
+  var dayOfWeek = days[(d.getDay() + i) % 7 ];
 
   boxes[i].innerHTML += "<p>&nbsp&nbsp&nbsp" + dayOfWeek + "</p>";
   boxes[i].innerHTML += "<p>" + weatherIcon(icon) + "</p>";
