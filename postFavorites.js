@@ -1,5 +1,5 @@
 var nameInput = document.getElementById('name');
-document.querySelector('form.pure-form').addEventListener('submit', function (e) {
+document.querySelector('form.pure-post-form').addEventListener('submit', function (e) {
   console.log(nameInput.value);
   addFavoritesUrl = "https://dry-hollows-79406.herokuapp.com/api/v1/favorites"
   addFavoritesData = {
