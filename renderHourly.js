@@ -9,7 +9,7 @@ console.log(avg/8 * 10);
 
 var forecasts = []
 for (var i= 0; i<24; i++){
-  var hours = new Date(data.hourly_forecasts[i+1].id*1000).getHours();
+  var hours = new Date(data.hourly_forecasts[i].id*1000).getHours();
   if (hours == 0){
     hours = "12 AM";
   } else if (hours < 13){
