@@ -17,6 +17,8 @@ function weatherIcon(forecast){
     return '<i class="fas fa-cloud-moon"></i>';
   case "cloudy":
     return '<i class="fas fa-cloud"></i>';
+  case "rain":
+    return '<i class="fas fa-cloud"></i>';
   default:
   }
 }
