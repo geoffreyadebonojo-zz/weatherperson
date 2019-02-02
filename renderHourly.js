@@ -2,7 +2,7 @@ var data  = JSON.parse(localStorage.getItem("storedForecast"));
 
 // var start = new Date().getHours();
 var avg = 0;
-for (var i= 0; i<8; i++){
+for (var i= 0; i<23; i++){
   avg += data.hourly_forecasts[i].temp;
 }
 console.log(avg/8 * 10);
@@ -27,8 +27,7 @@ for (var i= 0; i<24; i++){
     class="hourly"
     style="background:rgb(${ Math.round(forecast)*3 - 50}, ${ Math.round(forecast)*3 - 50}, ${ Math.round(forecast)*20 - 100});">
       <p>${hours}</p>
-      <p style="position: relative; bottom: ${Math.round(forecast)*adjuster - (avg/8 * adjuster) - 40}%;"">${Math.round(forecast)}&deg</p>
+      <p style="position: relative; bottom: ${Math.round(forecast)*adjuster - (avg/23 * adjuster) - 50}%;"">${Math.round(forecast)}&deg</p>
     </div>
   `);
 }
-console.log(`8 hourly forecasts displayed`);
