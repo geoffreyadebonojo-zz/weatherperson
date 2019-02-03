@@ -2,7 +2,7 @@ function weatherIcon(forecast){
   switch(forecast) {
     //find a better icon for fog and overcast
   case "fog":
-    return '<i class="fa fa-cloud" aria-hidden="true"></i>';
+    return '<i class="fas fa-fog"></i>';
   case "overcast":
     return '<i class="fa fa-cloud" aria-hidden="true"></i>'
   case "snow":
@@ -18,7 +18,7 @@ function weatherIcon(forecast){
   case "cloudy":
     return '<i class="fas fa-cloud"></i>';
   case "rain":
-    return '<i class="fas fa-cloud"></i>';
+    return '<i class="fa fa-tint"></i>';
   default:
   }
 }

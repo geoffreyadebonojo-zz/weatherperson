@@ -8,7 +8,6 @@ function renderMain(){
 
   var leftMain = $( "#left-main" );
   leftMain.append(`
-    <p class="summary"> ${weatherIcon(forecast)}&nbsp ${summary} </p>
     <h1 class="temp-display">
       ${Math.round(temp)}&deg
     </h1>
@@ -53,7 +52,7 @@ function renderMain(){
     </p>
   `);
 
-center = {x: 95, y: 60};
+center = {x: 95, y: 80};
 size = {minMax: 70, outer: 60, inner: 50};
 
 var c = document.getElementById("temp-gauge");

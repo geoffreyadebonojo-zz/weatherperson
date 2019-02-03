@@ -18,5 +18,5 @@ for (var i= 0; i<boxes.length; i++){
   boxes[i].innerHTML += "<p>Precipitation: " + Math.round(precip*100) + "%</p>";
   boxes[i].innerHTML += "<p>High: " + Math.round(high) + "&deg</p>";
   boxes[i].innerHTML += "<p>Low: " + Math.round(low) + "&deg</p>";
+  console.log(icon);
 }
-console.log(`${boxes.length} hourly forecasts displayed`);
