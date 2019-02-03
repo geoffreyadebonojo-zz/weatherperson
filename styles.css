@@ -41,8 +41,8 @@
 .temp-display{
   font-size: 2em;
   position: relative;
-  bottom: 180px;
-  left: 65px;
+  bottom: 128px;
+  left: 60px;
 }
 
 .summary{
@@ -52,18 +52,18 @@
 
 .low{
   position: relative;
-  bottom: 200px;
+  bottom: 150px;
 }
 
 .high{
   position: relative;
-  bottom: 170px;
+  bottom: 120px;
   left: 120px;
 }
 
 #temp-gauge{
   position:relative;
-  top: 20px;
+  top: 0px;
 }
 
 #details-container{
