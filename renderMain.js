@@ -38,9 +38,8 @@ function renderMain(){
   var months = m[date.getMonth()];
   var day = date.getDate();
 
-  console.log(hours, minutes, months, day);
   var rightMain = $("#right-main");
-  rightMain.append(`
+  rightMain.prepend(`
     <h3>
       ${city}, ${state}
     </h3>

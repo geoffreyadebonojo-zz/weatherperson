@@ -5,7 +5,6 @@ var avg = 0;
 for (var i= 0; i<23; i++){
   avg += data.hourly_forecasts[i].temp;
 }
-console.log(avg/8 * 10);
 
 var forecasts = []
 for (var i= 0; i<24; i++){

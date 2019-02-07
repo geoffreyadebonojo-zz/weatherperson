@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile-styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -14,17 +15,17 @@
   <script src="getApiKey.js"></script>
 </head>
 <body>
-  <form class="pure-form">
-      <input id="name" type="text" placeholder="Enter Name" />
-      <button type="submit">ADD CITY</button>
-  </form>
-
   <div id="top">
     <div id="main-container">
       <div id="left-main">
         <canvas id="temp-gauge"></canvas>
       </div>
-      <div id="right-main"></div>
+      <div id="right-main">
+        <form class="pure-form">
+            <input id="city-name" type="text" placeholder="Enter Name" />
+            <button type="submit">SEARCH</button>
+        </form>
+      </div>
     </div>
     <div id="details-container">
       <div id="left-details"></div>
@@ -36,6 +37,8 @@
   <div id="bottom">
     <div id="hourly"></div>
     <div id="daily">
+      <div class="daily"></div>
+      <div class="daily"></div>
       <div class="daily"></div>
       <div class="daily"></div>
       <div class="daily"></div>
