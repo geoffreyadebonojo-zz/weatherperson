@@ -18,6 +18,14 @@ for (var i= 0; i<boxes.length; i++){
   boxes[i].innerHTML += `<p>${weatherIcon(icon)} ${summary}</p>`;
   boxes[i].innerHTML += `<p><i class="fa fa-tint"></i> ${Math.round(precip*100)}%</p>`;
   boxes[i].innerHTML += `
-  <p style="position: relative; left: ${low * 10}px;">${Math.round(low)}</p>
-  <p style="position: relative; left: ${high * 10}px;">${Math.round(high)}</p>`
+  <div class="temp-range"
+       style="display:
+       flex; position:relative;
+       left:${low * 8};
+       width:${(high - low) * 8};
+       background: rgb(${ Math.round( (high+low)/2 )*3 - 50}, ${ Math.round( (high+low)/2 )*3 -40}, 255);">
+    <p style="position: relative; right: 10px;">${Math.round(low)}</p>
+    <p style="position: relative; left: ${(high - low) * 6}px;">${Math.round(high)}</p>
+  </div>
+  `
 }
