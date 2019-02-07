@@ -15,6 +15,8 @@
   <script src="getApiKey.js"></script>
 </head>
 <body>
+  <div id="weather-canvas-container">
+  </div>
   <div id="top">
     <div id="main-container">
       <div id="left-main">
@@ -28,8 +30,9 @@
       </div>
     </div>
     <div id="details-container">
-      <div id="left-details"></div>
+      <canvas id="weather-canvas"></canvas>
       <div id="right-details"></div>
+      <div id="left-details"></div>
       <div id="bottom-details"></div>
     </div>
   </div>
@@ -49,6 +52,7 @@
   </div>
 
 </body>
+<script src="animateSnow.js"></script>
 <script src="renderMain.js"></script>
 <script src="renderHourly.js"></script>
 <script src="renderDaily.js"></script>
