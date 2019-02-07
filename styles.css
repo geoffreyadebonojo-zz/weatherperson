@@ -28,6 +28,20 @@
   height: 280px;
 }
 
+#city-name {
+  border-radius: 10px;
+  text-indent: 5px;
+}
+
+button {
+  border-radius: 10px;
+}
+
+button:hover {
+  border: blue 1px solid;
+  cursor: pointer;
+}
+
 #right-main{
   margin: 20px;
   padding: 20px;
@@ -72,7 +86,6 @@
   grid-template-rows: 140px;
   height: 280px;
   width: 100%;
-  overflow: scroll;
 }
 
 #right-details, #left-details, #bottom-details{
@@ -88,7 +101,7 @@
 }
 
 #right-details{
-  line-height: 1.7em;
+  line-height: 1.2em;
 }
 
 #bottom{
@@ -127,7 +140,6 @@
 }
 
 .daily{
-  /* border: 1px red solid; */
   display: grid;
   grid-template-columns: 25% 12% 25% 20% 20%;
   grid-gap: 5px;
