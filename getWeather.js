@@ -6,7 +6,6 @@ function getWeather(){
   .then(data => {
     localStorage.setItem("storedForecast", JSON.stringify(data.data));
     forecast = JSON.parse(localStorage.getItem("storedForecast"));
-    console.log(data);
   })
   .catch(error => console.error(error))
 }
