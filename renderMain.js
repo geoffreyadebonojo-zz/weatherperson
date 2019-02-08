@@ -7,7 +7,9 @@ function renderMain(){
   var low      = data.low;
 
   var leftMain = $( "#left-main" );
-  leftMain.append(`
+  leftMain.html(`
+
+    <canvas id="temp-gauge"></canvas>
     <h1 class="temp-display">
       ${Math.round(temp)}&deg
     </h1>
@@ -39,7 +41,7 @@ function renderMain(){
   var day = date.getDate();
 
   var rightMain = $("#right-main");
-  rightMain.prepend(`
+  rightMain.html(`
     <h3>
       ${city}, ${state}
     </h3>
@@ -49,6 +51,10 @@ function renderMain(){
     <p class="secondary">
       ${hours}:${minutes}, ${months}/${day}
     </p>
+    <form class="pure-form">
+        <input id="city-name" type="text" placeholder="Enter Name" />
+        <button type="submit">SEARCH</button>
+    </form>
   `);
 
 center = {x: 95, y: 80};

@@ -146,13 +146,13 @@ function animateRain() {
   });
 }
 console.log(data.summary);
-let weather = "Light Snow";
+let weather = "Rain";
 
 if ( weather.includes("Snow") ){
   setInterval(function (){
     animateSnow();
   }, 1000/30);
-} else if ( weather.includes("rain") ){
+} else if ( weather.includes("Rain") ){
   setInterval(function (){
     animateRain();
   }, 1000/30);

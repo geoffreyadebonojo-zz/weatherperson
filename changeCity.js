@@ -8,6 +8,10 @@ document.querySelector('form.pure-form').addEventListener('submit', function (e)
   $.get(url, function(data, status){
     localStorage.setItem("storedForecast", JSON.stringify(data.data));
     forecast = JSON.parse(localStorage.getItem("storedForecast"));
+    renderMain();
+    renderDetails();
+    renderHourly();
+    renderDaily();
   });
   // prevent the normal submission of the form
   e.preventDefault();
