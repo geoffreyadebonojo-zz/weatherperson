@@ -1,13 +1,11 @@
 function renderDaily() {
   var boxes = $(".daily")
-  console.log(boxes);
   var data  = JSON.parse(localStorage.getItem("storedForecast"));
 
   for (var i= 0; i<boxes.length; i++){
     var high = data.daily_forecasts[i].high;
     var low = data.daily_forecasts[i].low;
     var icon = data.daily_forecasts[i].icon;
-    console.log(icon);
     var date = new Date(data.daily_forecasts[i].id*1000).toDateString();
     var precip = data.daily_forecasts[i].precipitation;
     var summary = data.summary

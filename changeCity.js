@@ -1,6 +1,6 @@
 var nameInput = document.getElementById('city-name');
 document.querySelector('form.pure-form').addEventListener('submit', function (e) {
-  console.log(nameInput.value);
+
   if (nameInput.value == ""){
     nameInput.value = "Denver, CO"
   }
@@ -12,6 +12,7 @@ document.querySelector('form.pure-form').addEventListener('submit', function (e)
     renderDetails();
     renderHourly();
     renderDaily();
+
   });
   // prevent the normal submission of the form
   e.preventDefault();
