@@ -192,7 +192,7 @@ function animateWeather() {
     clouds.push(cloud1);
   }
 
-  function animateClouds() {
+  function animateClouds(numClouds) {
     ctx.clearRect(0, 0, 1200, 400);
     ctx.fillStyle = "#7371FC";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -352,32 +352,31 @@ function animateWeather() {
 
 
 
-  let weather = data.summary.toLowerCase();
-  let today = data.today_summary.toLowerCase();
-  let tonight = data.tonight_summary.toLowerCase();
+  let weather = data.today_summary.toLowerCase();
   console.log(weather);
 
-  if ( weather.includes("snow") || today.includes("snow") ){
+  if ( weather.includes("snow") ){
     setInterval(function (){
       animateSnow();
     }, 1000/30);
-  } else if ( weather.includes("windy") || today.includes("windy") ){
+  } else if ( weather.includes("windy") ){
     setInterval(function (){
-      animateGusts();
+      // animateGusts();
     }, 1000/30);
-  } else if ( weather.includes("rain") || today.includes("rain") || weather.includes("drizzle") || today.includes("drizzle")){
+  } else if ( weather.includes("rain") || weather.includes("drizzle") ){
     setInterval(function (){
       animateRain();
     }, 1000/30);
-  } else if ( weather.includes("mostly cloudy") || today.includes("mostly cloudy") ){
+  } else if ( weather.includes("mostly cloudy") ){
     setInterval(function (){
       animateClouds(20);
     }, 1000/30);
-  }  else if ( weather.includes("partly cloudy") || today.includes("partly cloudy") || weather.includes("foggy") || today.includes("foggy")){
+  }  else if ( weather.includes("partly cloudy") || weather.includes("foggy") ){
+    console.log("fog or clouds");
     setInterval(function (){
       animateClouds(3);
     }, 1000/30);
-  } else if ( weather.includes("clear") || today.includes("clear") ){
+  } else if ( weather.includes("clear") ){
     setInterval(function (){
       animateSun();
     }, 1000/30);
