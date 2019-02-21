@@ -18,9 +18,7 @@ function renderMain(){
     } else if (temp < 60) {
       shields += '<i class="fas fa-shield-alt"></i> ';
     }
-    //
-    console.log(data);
-    //
+  
     if ( summary.includes("Rain") || summary.includes("Flurries") ){
       shields += '<i class="fas fa-umbrella"></i>';
     }
