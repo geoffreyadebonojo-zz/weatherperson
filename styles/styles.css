@@ -1,7 +1,7 @@
 @media only screen and (min-width: 769px){
 
 body {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   width: 100%;
   color: #F5EFFF;
@@ -59,6 +59,11 @@ button:hover {
   padding: 20px;
 }
 
+#protection {
+  position: relative;
+  bottom: 150px;
+}
+
 .temp-display{
   font-size: 2em;
   position: relative;
@@ -92,7 +97,9 @@ button:hover {
   grid-template-columns: 600px 200px;
   grid-template-rows: 140px;
   height: 280px;
-  width: 100%;
+  width: 680px;
+  position: relative;
+  /* right: 80px; */
 }
 
 #right-details, #left-details, #bottom-details{

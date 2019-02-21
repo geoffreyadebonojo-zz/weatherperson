@@ -6,9 +6,31 @@ function renderMain(){
   var high     = data.high;
   var low      = data.low;
 
+  function renderShields() {
+    let shields = ""
+    if (temp < 20){
+      shields += '<i class="fas fa-shield-alt"></i> ';
+      shields += '<i class="fas fa-shield-alt"></i> ';
+      shields += '<i class="fas fa-shield-alt"></i> ';
+    } else if (temp < 55) {
+      shields += '<i class="fas fa-shield-alt"></i> ';
+      shields += '<i class="fas fa-shield-alt"></i> ';
+    } else if (temp < 60) {
+      shields += '<i class="fas fa-shield-alt"></i> ';
+    }
+    //
+    console.log(data);
+    //
+    if ( summary.includes("Rain") || summary.includes("Flurries") ){
+      shields += '<i class="fas fa-umbrella"></i>';
+    }
+
+    return(shields)
+  }
+
+
   var leftMain = $( "#left-main" );
   leftMain.html(`
-
     <canvas id="temp-gauge"></canvas>
     <h1 class="temp-display">
       ${Math.round(temp)}&deg
@@ -19,6 +41,9 @@ function renderMain(){
     <p class="low secondary">
       Low:  ${Math.round(low)}
     </p>
+    <div id="protection">
+      ${renderShields()}
+    </div>
   `);
   if (temp < 32) {
     $(".temp-display").css({
