@@ -11,8 +11,8 @@ function renderDetails(){
 
   var leftDetails = $("#left-details");
   leftDetails.html(`
-    <h1 class="centered" id="details-icon">&nbsp&nbsp${weatherIcon(forecast)}</h1>
-    <p class="secondary centered" id="details-summary">${summary}</p>
+    <!--h1 class="centered" id="details-icon">&nbsp&nbsp${weatherIcon(forecast)}</h1-->
+    <!--p class="secondary centered" id="details-summary">${summary}</p-->
     <br>
   `);
 
